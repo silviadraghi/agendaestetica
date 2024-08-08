@@ -1,0 +1,1261 @@
+ @import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+ /* colores en variables. */
+ :root {
+   --clr-brown: #95674c;
+   --clr-verde: #43855e;
+   --clr-white: #f2f2f2;
+   --clr-beige: #f5f5dc;
+ }
+
+ /* reseteo generales de estilos */
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   color: var(--clr-black);
+   scroll-behavior: smooth;
+   font-family: "Rubik", sans-serif;
+ }
+
+ ul {
+   list-style-type: none;
+ }
+
+ a {
+   text-decoration: none;
+   font-family: "Julius Sans One", sans-serif;
+ }
+
+ button {
+   background-color: transparent;
+   border: 0;
+   border-radius: 0;
+ }
+
+ body {
+   max-width: 1440px;
+   margin: auto;
+
+ }
+
+ /* comienzan estilos de nav bar */
+ header {
+   max-width: 1440px;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   box-shadow: 0 0 3rem -0.5rem rgb(0, 0, 0, 0.25);
+   width: 100%;
+   height: 5.5rem;
+   position: fixed;
+   z-index: 3;
+   background-color: var(--clr-white);
+ }
+
+ .logo img {
+   width: 80px;
+ }
+
+
+ .nav-bar {
+   display: flex;
+   gap: 2rem;
+ }
+
+ .nav-link {
+   display: flex;
+   justify-content: flex-end;
+   gap: 2rem;
+   font-family: "Julius Sans One", sans-serif;
+   color: var(--clr-brown);
+   font-size: 1.2rem;
+   transition: 0.3s;
+ }
+
+ .link {
+   position: relative;
+ }
+
+ .link a:before {
+  position: absolute;
+  opacity: 0.5;
+  content: "";
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  width: 100%;
+  background: var(--clr-brown);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform .3s ease-in-out;
+}
+.link a:hover:before {
+  transform: scaleX(0.9);
+  transform-origin: center;
+}
+
+ .redes {
+   font-size: 1.2rem;
+   display: flex;
+   gap: 1rem;
+   color: var(--clr-brown);
+
+ }
+
+ .redes a {
+   transition: .5s ease;
+ }
+
+ .redes a:hover {
+   transform: scale(1.2);
+ }
+
+ /* commienzan estilos de slider */
+
+ .container-slider {
+   width: 100%;
+ }
+
+ .slider {
+   display: flex;
+   transition: transform 0.5s ease;
+   aspect-ratio: 16 / 9;
+   object-fit: contain;
+   overflow: hidden;
+
+ }
+
+ .imagen-slider {
+   flex: 0 0  100%;
+   position: relative;
+   width: 100%;
+   height: auto; 
+ }
+
+ .slider .imagen-slider {
+   display: block;
+   width: 100%;
+   object-fit: cover;
+
+ }
+
+ /* estilos para TITULO Y PARRAFO dentro del slider */
+ .fixed-content {
+   width: 100%;
+   padding-block: 2rem;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   z-index: 1;
+   background-color: rgba(0, 0, 0, 0.6);
+   /* Color negro con 30% de opacidad */
+
+ }
+
+ .main-tittle {
+   font-size: 4.2rem;
+   font-family: "Julius Sans One", sans-serif;
+   font-weight: lighter;
+   color: var(--clr-beige);
+
+ }
+
+ .intro-text {
+   color: var(--clr-beige);
+   font-family: "Julius Sans One", sans-serif;
+   font-size: 1.2rem;
+
+ }
+
+ .general-button {
+   width: 25%;
+   padding: 1rem;
+   border-radius: 1rem;
+   height: max-content;
+   background-color: var(--clr-brown);
+   margin-top: 1rem;
+   transition: 0.5s;
+   cursor: pointer;
+   font-size: 1rem;
+   color: var(--clr-white);
+   font-family: "Julius Sans One", sans-serif;
+ }
+
+
+
+ .general-button:hover {
+   transform: scale(1.07);
+   box-shadow: 0 0 2rem rgb(0, 0, 0, 0.25);
+ 
+ }
+
+ /* comienzan estilos de Quienes somos */
+ .quienes-somos {
+   padding: 3rem 8rem;
+   position: relative;
+ }
+
+ .quienes-somos .shape {
+   z-index: -100;
+   position: absolute;
+   top: -82px;
+   left: 0;
+   width: 40%;
+ }
+
+ .subtitulo-quienesSomos {
+   text-align: center;
+   font-size: 4.2rem;
+   font-family: "Julius Sans One", sans-serif;
+   font-weight: lighter;
+   color: var(--clr-brown);
+   margin: 2.5rem 0 8rem 0;
+ }
+
+ .quienes-somos-img,
+ .container-quienes-somos {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0 0 2rem 0;
+ }
+
+ .quienes-somos-descripcion {
+   max-width: 40%;
+   margin-right: 5rem;
+ }
+
+ .quienes-somos-descripcion p {
+   font-family: "Roboto Condensed", sans-serif;
+   font-size: 1.8rem;
+   margin-bottom: 2rem;
+ }
+
+ .quienes-somos-descripcion span {
+   font-weight: bold;
+ }
+
+ .quienes-somos-img img {
+   border-radius: 15px;
+   box-shadow: 6px 6px 9px -3px rgba(0, 0, 0, 0.5);
+ }
+
+ /* comienzan estilos de Nuestros Productos */
+ .nuestros-productos {
+   padding: 5rem 10rem;
+   position: relative;
+ }
+
+ .nuestros-productos .np-shape {
+   z-index: -100;
+   position: absolute;
+   top: -12px;
+   right: 0;
+   width: 40%;
+ }
+
+ .nuestros-productos-descripcion p {
+   color: var(--clr-verde);
+   font-family: "Julius Sans One", sans-serif;
+   font-size: 1.2rem;
+   text-align: center;
+   margin: 1.5rem;
+ }
+
+ .subtitulo-nuestros-productos {
+   text-align: center;
+   font-size: 4.2rem;
+   font-family: "Julius Sans One", sans-serif;
+   font-weight: lighter;
+   color: var(--clr-brown);
+   margin: 2.5rem 0 3rem 0;
+ }
+
+ .container-nuestros-productos {
+   width: auto;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   gap: 3rem;
+   text-align: center;
+   z-index: 100;
+ }
+
+ .item1-nuestros-productos {
+   text-align: center;
+   padding: 1.3rem 1.5rem;
+   border-radius: 5px;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+   position: relative;
+
+ }
+
+ .item1-nuestros-productos p {
+   font-family: "Julius Sanz One", sans-serif;
+   font-size: 1rem;
+   font-weight: lighter;
+   text-align: center;
+   margin: 0.8rem;
+
+ }
+
+ .item1-nuestros-productos img {
+   width: 90%;
+ }
+
+ .boton-nuestros-productos {
+   text-align: center;
+   margin: 2rem;
+ }
+
+ /* comienzan estilos de Contactanos */
+ .contactanos {
+   padding: 1rem 8rem 7rem 8rem;
+   position: relative;
+ }
+
+ #contactanos {
+   text-align: center;
+ }
+
+ .contactanos .shape2 {
+   z-index: -100;
+   position: absolute;
+   top: -82px;
+   left: 0;
+   width: 40%;
+ }
+
+ .subtitulo {
+   text-align: center;
+   font-size: 4.2rem;
+   font-family: "Julius Sans One", sans-serif;
+   font-weight: lighter;
+   color: var(--clr-brown);
+ }
+
+ .intro-seccion {
+   color: var(--clr-verde);
+   font-family: "Julius Sans One", sans-serif;
+   font-size: 1.2rem;
+   text-align: center;
+   margin: 1rem 0 4rem 0;
+ }
+
+ .contactanos-img img {
+   width: 100%;
+ }
+
+ .container-contactanos {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 5rem;
+   justify-content: space-around;
+   padding: 0 0 2rem 0;
+   margin: 0 2rem 0 2rem;
+ }
+
+ .contactoForm {
+   border-radius: 5px;
+   width: 40%;
+   padding: 40px;
+   background: var(--clr-brown);
+   margin: auto;
+   margin-top: 20px;
+   text-align: left;
+   box-shadow: 5px 6px 9px -3px rgba(0, 0, 0, 0.5);
+ }
+
+ .contactoForm h3 {
+   font-size: 30px;
+   color: #333;
+   font-weight: 500;
+   padding-bottom: 30px;
+ }
+
+ .contactoForm .inputBox {
+   position: relative;
+   margin-top: 10px;
+ }
+
+ .contactoForm .inputBox input,
+ .contactoForm .inputBox textarea {
+   width: 100%;
+   padding: 5px 0;
+   font-size: 16px;
+   margin: 10px 0;
+   border: none;
+   border-bottom: 2px solid #fff;
+   outline: none;
+   resize: none;
+   background: var(--clr-brown);
+ }
+
+ .inputBox label {
+   color: #fff;
+   font-family: "Julius Sans One", sans-serif;
+ }
+
+ .inputBox span {
+  position: absolute;
+  bottom: 22px;
+  right: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  font-family: "Roboto Condensed", sans-serif;
+ }
+ #submit-error {
+  color: #000;
+  font-weight: bold;
+  margin: 24px 0 0 0;
+ }
+ .inputBox span i {
+  color: #fff;
+  font-size: 1rem;
+  position: absolute;
+  bottom: -8px;
+  right: -21px;
+  background: seagreen;
+  border-radius: 50%;
+  text-align: center;
+  width: 1rem;
+  height: 1rem;
+ }
+ .subirImagen {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: bold;
+  display: inline-block;
+  text-transform: uppercase;
+  color: #000;
+  background: #fff;
+  text-align: center;
+  padding: 15px 40px;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  user-select: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+  box-shadow: 5px 5px 25px rgba(0,0,0,0.35);
+  border-radius: 10px;
+ }
+ .subirImagen i {
+  font-size: 20px;
+  margin-right: 10px;
+ }
+ 
+ input[type="file"] {
+  display: none;
+ }
+
+ .inputButtons {
+  position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .inputButtons .submit {
+   align-self: center;
+   margin-top: 30px;
+ }
+
+ .checkbox{
+   width: 1.5rem;
+   height: 1.5rem;
+   margin-right: 1rem;
+   accent-color: #fff;
+   color: var(--clr-brown);
+ }
+
+ .newsletter {
+   color: #fff;
+   font-family: "Roboto Condensed", sans-serif;
+   text-transform: uppercase;
+   padding: 1rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .btn {
+   font-family: "Julius Sans One", sans-serif;
+   background-color: #fff;
+   color: #000;
+   padding: 15px 62px;
+   font-size: 1.5rem;
+   font-weight: bold;
+   cursor: pointer;
+   border-radius: 10px;
+   border: none;
+   box-shadow: 5px 5px 25px rgba(0,0,0,0.35);
+ }
+
+ .btn-wsp {
+   position: fixed;
+   width: 4rem;
+   height: 4rem;
+   line-height: 4rem;
+   bottom: 4rem;
+   right: 2rem;
+   background: #0df053;
+   color: #fff;
+   border-radius: 50%;
+   text-align: center;
+   font-size: 2.8rem;
+   box-shadow: 0 4px 9px -3px rgba(0, 0, 0, 0.5);
+   transition: transform 0.3s ease;
+ }
+
+ .btn-wsp:hover {
+   transform: scale(1.05);
+ }
+
+ /* comienzas estilos para catalogo.html */
+
+ .catalogo {
+   padding: 7rem 0rem 4rem 0rem;
+   position: relative;
+ }
+
+ .catalogo .shape {
+   z-index: -100;
+   position: absolute;
+   top: -82px;
+   left: 0;
+   width: 35%;
+ }
+
+ .catalogo-descripcion {
+   margin: 2.5rem 0rem 3rem 0rem;
+ }
+
+ .catalogo-descripcion p {
+   text-align: center;
+   font-size: 1.8rem;
+   font-family: "Julius Sans One", sans-serif;
+   font-weight: 100;
+   color: black;
+ }
+
+ .catalogo-descripcion span {
+   font-weight: bold;
+ }
+
+ .catalogo-container {
+   
+   max-width: 1440px;
+   margin: auto;
+   display: grid;
+   grid-template-columns: 30% 30% 30%;
+   justify-content: center;
+   gap: 1.2rem;
+   text-align: center;
+   margin-bottom: 2rem;
+ }
+
+ article {
+   display: grid;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   box-shadow: 2px 0px 5px gray;
+   border-radius: 5px;
+ }
+
+ article img {
+   max-width: 100%;
+   height: auto;
+ }
+
+ article p {
+   margin-top: 0.5rem;
+   padding: 0.3rem 0 0 0;
+   font-family: "Roboto Condensed", sans-serif;
+   font-size: 1rem;
+   font-weight: lighter;
+   text-align: center;
+ }
+
+ article a {
+   margin-bottom: 0.8rem;
+   padding: 0.6rem 0 0 0;
+   font-family: "Roboto Condensed", sans-serif;
+   font-size: 1.2rem;
+   font-weight: bold;
+   text-align: center;
+ }
+/* estilos para vermas.html */
+.vermas-container {
+  padding-block: 2rem;
+  max-width: 1440px;
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns:50% 50%;
+  justify-content: center;
+  gap:0.5rem;
+  text-align: center;
+ /*  margin-bottom: 2rem; */
+}
+
+.vermas-grupo1 {
+  padding: 5rem 2rem 10rem 8rem;
+  margin-top: 3rem;
+  display: grid;
+  text-align: center;
+  justify-items: center;
+ 
+}
+
+.vermas-grupo1 img {
+  max-width: 100%;
+  height: auto;  
+ 
+}
+.vermas-grupo2 {
+    margin-top: 4rem;
+    text-align: start;
+ }
+
+.vermas-grupo2 h2 {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 1.8rem;
+  font-weight: lighter;
+  text-align: left;
+}
+.vermas-grupo2 p {
+  margin-top: 0.8rem;
+   padding: 0.3rem 0 0 0;
+   font-family: "Julius Sans One", sans-serif;
+   font-size: 1.2rem;
+   font-weight: lighter;
+   text-align: left;
+   
+  
+}
+#vermas-grupo2-precio{
+  margin-top:2.5rem;
+   padding: 0.3rem 0 0 0;
+   font-family: "Julius Sans One", sans-serif;
+   font-size: 1.4rem;
+   font-weight: lighter;
+   text-align: left;
+
+}
+  .container-grupo2{
+    margin-bottom: 2rem;
+  }
+.btn-vermas{
+  cursor: pointer;
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 1rem;
+  text-decoration: underline;
+  font-weight:700;
+  text-align: justify;
+}
+.btn-vermas:hover {
+  transform: scale(1.05);
+}
+
+.btn-volver{
+  float: inline-end;
+  font-family: "Julius Sans One", sans-serif;
+  text-transform: uppercase;
+  padding: 1rem;
+  cursor: pointer;
+}
+ /* estilos para botones de nav-bar (hamburguesa) */
+ .boton-abrir-menu,
+ .boton-cerrar-menu {
+   display: none;
+   background-color: transparent;
+   cursor: pointer;
+   border: 0;
+   border-radius: 0.5rem;
+   color: var(--clr-brown);
+ }
+
+ .boton-volver:hover {
+   transform: scale(1.3);
+   box-shadow: 0 0 1rem var(--color-beige);
+ }
+
+ /* estilos boton volverarriba */
+ .boton-volver {
+   background-color: var(--color-bordoOscuro);
+   color: var(--color-beige);
+   height: 2rem;
+   width: 2rem;
+   border-radius: 50%;
+   position: fixed;
+   bottom: 2rem;
+   right: 2rem;
+   display: none;
+   align-items: center;
+   color: var(--color-beige);
+   cursor: pointer;
+   opacity: 0;
+   transition: all 1s ease;
+ }
+
+ .boton-volver:hover {
+   transform: scale(1.3);
+   box-shadow: 0 0 1rem var(--color-beige);
+ }
+
+ /* footer */
+ .pie-pagina {
+
+   background-color: var(--clr-brown);
+ }
+
+ .pie-pagina .grupo-1 {
+
+   max-width: 1100px;
+   margin: auto;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 50px;
+   padding: 2rem 0;
+ }
+
+ .pie-pagina .grupo-1 .mapa {
+   width: 300px;
+ }
+ .agenda {
+  width: 100%;
+  height: 500px;
+}
+
+ .pie-pagina .grupo-1 h3 {
+   font-family: "Julius Sans One", sans-serif;
+   margin-bottom: 1rem;
+   text-align: center;
+   font-size: 1.5rem;
+ }
+
+ .pie-pagina .grupo-1 p {
+   font-family: "Roboto Condensed", sans-serif;
+   margin-bottom: .5rem;
+   text-transform: uppercase;
+   text-align: right;
+
+ }
+
+ .pie-pagina .grupo-1 h4 {
+   font-family: "Julius Sans One", sans-serif;
+   margin-bottom: 1rem;
+   font-size: 1.5rem;
+   text-align: right;
+ }
+
+ .redes-social {
+   margin-top: .5rem;
+ }
+
+ .pie-pagina .grupo-1 .link-footer {
+   display: block;
+   padding-block: .5rem;
+   text-align: right;
+   transition: .5s ease;
+
+ }
+
+ .pie-pagina .grupo-1 .link-footer:hover {
+   color: var(--clr-beige);
+
+ }
+
+
+ .pie-pagina .grupo-1 .redes-social {
+   text-align: right;
+   font-size: 1.5rem;
+
+ }
+
+ .pie-pagina .grupo-1 .redes-social a {
+   margin-top: .5rem;
+   padding-inline: .5rem;
+   transition: .5s ease;
+
+ }
+
+ .pie-pagina .grupo-1 .redes-social a:hover {
+   color: var(--clr-beige);
+
+ }
+
+ .grupo-2 {
+   text-align: center;
+   opacity: .7;
+   padding-block: 1rem;
+ }
+
+ .nombre-footer {
+   font-family: "Julius Sans One", sans-serif;
+
+ }
+
+ @media only screen and (min-width: 1441px) {
+   .fixed-content {
+     width: 50%;
+
+   }
+ }
+
+ @media only screen and (max-width: 1024px) {
+   .fixed-content {
+     top: 35%
+   }
+
+   h1 {
+     margin: 1rem;
+   }
+
+   .intro-text {
+     font-size: 1rem;
+   }
+
+   .quienes-somos {
+     padding: 1rem 4rem;
+   }
+
+   .subtitulo-quienesSomos {
+     margin: 2rem 0 4rem 0;
+     font-size: 3rem;
+   }
+
+   .nuestros-productos {
+     padding: 1rem 4rem;
+   }
+
+   .subtitulo-nuestros-productos {
+     margin: 2rem 0 2rem 0;
+     font-size: 3rem;
+   }
+
+   .general-button {
+     width: 30%;
+   }
+
+   .subtitulo {
+     font-size: 3rem;
+     margin: 0rem 0 1rem 0;
+   }
+
+   .intro-seccion {
+     margin: 1rem 0 2rem 0;
+   }
+
+   .container-contactanos {
+
+     margin: 0 1rem 0 1rem;
+     gap: 1rem;
+   }
+
+   .contactanos-img {
+     width: 50%;
+   }
+
+   .contactoForm {
+     width: 50%;
+     padding: 30px;
+   }
+
+   .btn {
+     text-align: center;
+     padding: .5rem 1rem;
+   }
+
+   .subirImagen {
+    padding: .5rem;
+   }
+
+   .inputBox span {
+    font-size: 12px;
+    bottom: 34px;
+    left: 0;
+   }
+
+   .grupo-1 {
+     width: 90%;
+   }
+ }
+
+ @media screen and (max-width: 768px) {
+
+   .fixed-content {
+     top: 25%
+   }
+
+   .boton-abrir-menu,
+   .boton-cerrar-menu {
+     width: fit-content;
+     display: block;
+     font-size: 3rem;
+     text-align: right;
+     padding: 1rem;
+   }
+
+   .boton-cerrar-menu {
+     color: var(--clr-beige);
+     padding: 0;
+   }
+
+   .logo {
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     padding-inline: 1rem;
+   }
+
+   .logo img {
+     width: 150px;
+   }
+
+   .nav-bar {
+     display: none;
+     background-color: var(--clr-brown);
+     height: 100vmax;
+     padding: 1rem;
+     flex-direction: column;
+     align-items: end;
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     right: 0;
+     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+     gap: 1rem;
+     transition: 0.5s ease-in-out;
+     color: var(--clr-white);
+     gap: 0;
+
+   }
+
+   .nav-link {
+     flex-direction: column;
+     align-items: end;
+     background-color: var(--clr-brown);
+     color: var(--clr-beige);
+     width: 100%;
+   }
+
+   .redes {
+     color: var(--clr-beige);
+     background-color: var(--clr-brown);
+     width: 100%;
+     padding: 2rem 1rem 2rem 1rem;
+     justify-content: flex-end;
+
+   }
+
+   .logo a {
+     width: 30%;
+   }
+
+   .nav-active {
+     display: block;
+     opacity: 1;
+     visibility: visible;
+     z-index: 1;
+     transition: 0.5s ease-in-out;
+   }
+
+   .fixed-content {
+     top: 40%;
+   }
+
+   .main-tittle {
+     font-size: 3rem;
+   }
+
+   .intro-text {
+     font: 1rem;
+   }
+
+   .general-button {
+     padding: .5rem;
+   }
+
+   .quienes-somos {
+     padding: 1rem 2rem;
+   }
+
+   .subtitulo-quienesSomos {
+     margin: 1rem 0 1rem 0;
+     font-size: 3rem;
+   }
+
+   .quienes-somos-descripcion {
+     max-width: 50%;
+     margin-right: 1rem;
+     font-size: .5rem;
+   }
+
+   .quienes-somos-descripcion p {
+     font-size: 1.5rem;
+   }
+
+   .quienes-somos-img {
+     width: 50%;
+     overflow: hidden;
+     border-radius: .5rem;
+
+   }
+
+   .nuestros-productos {
+     padding: 1rem 2rem;
+   }
+
+   .subtitulo-nuestros-productos {
+     margin: 1rem 0 1rem 0;
+
+   }
+
+   .nuestros-productos-descripcion {
+     font-size: 1rem;
+   }
+
+   .item1-nuestros-productos p {
+     font-size: .8rem;
+   }
+
+   .boton-nuestros-productos {
+     margin: 1rem;
+   }
+
+   .intro-seccion {
+     margin: 1rem 0 1rem 0;
+   }
+
+   .contactanos {
+     padding: 1rem 2rem 4rem 2rem;
+     position: relative;
+   }
+
+   .newsletter {
+     font-size: .8rem;
+   }
+
+   .btn {
+
+     padding: .2rem .5rem;
+   }
+   
+   .subirImagen {
+    padding: .4rem;
+   }
+
+
+   .pie-pagina .grupo-1 {
+     grid-template-columns: repeat(2, 1fr);
+     grid-gap: 60px;
+
+   }
+
+   .nav-footer {
+     display: none;
+     position: relative
+   }
+   .catalogo-container {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: center;
+    gap: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .vermas-container {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns:1fr;
+    justify-content: center;
+    gap:0.5rem;
+    text-align: left;
+   
+  }
+  .vermas-grupo1 {
+    padding: 2rem 2rem 2rem 2rem;
+    margin-top: 3rem;
+    display: grid;
+    text-align: center;
+    /* box-shadow: 2px 0px 5px gray;
+    border-radius: 5px; */
+  }
+
+  .vermas-grupo2{
+    margin: auto;
+  }
+  .container-grupo2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 2rem;
+  }
+}
+
+ @media screen and (max-width: 425px) {
+   header {
+     height: 4.2rem;
+   }
+
+   .slider {
+     aspect-ratio: 3/5;
+   }
+
+   .fixed-content {
+     top: 65%;
+   }
+
+   .general-button {
+     width: 60%;
+   }
+
+   .intro-text {
+     margin-inline: 1rem;
+   }
+
+   .quienes-somos {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     padding: 1rem 0rem;
+   }
+
+   .subtitulo-quienesSomos {
+     text-align: center;
+     font-size: 2rem;
+   }
+
+   .container-quienes-somos {
+     flex-direction: column;
+     padding: 0;
+   }
+
+   .quienes-somos-descripcion {
+     width: 100%;
+   }
+
+   .quienes-somos-img {
+     width: 100%;
+   }
+
+   .quienes-somos-img img {
+     width: 90%;
+     aspect-ratio: 3/3;
+     object-fit: cover
+   }
+
+   .quienes-somos-descripcion {
+     max-width: 100%;
+     padding: 1rem;
+     text-align: center;
+   }
+
+   .subtitulo-nuestros-productos{
+    font-size: 2rem;
+   }
+   .nuestros-productos {
+     padding: 1rem 1rem;
+   }
+
+   .container-nuestros-productos {
+     flex-direction: column;
+   }
+
+   .subtitulo-nuestros-productos {
+     margin: 0rem 0 1rem 0;
+   }
+
+   .contactanos {
+     padding: 1rem 1rem 2rem 1rem;
+     position: relative;
+   }
+
+   .checkbox{
+    margin: .5rem;
+   }
+   .subtitulo{
+    font-size: 2rem ;
+   }
+   .container-contactanos {
+     flex-direction: column;
+     flex-direction: column-reverse;
+   }
+
+   .contactoForm {
+     width: 100%;
+
+   }
+   
+   .pie-pagina .grupo-1 {
+     grid-template-columns: 1fr;
+     place-items: center;
+     grid-gap: 30px;
+   }
+   .pie-pagina .grupo-1 p {
+  
+    text-align: center;
+}
+
+.pie-pagina .grupo-1 iframe{
+  width: 280px;
+  margin: auto;
+ 
+}
+.nombre-footer {
+padding-inline: 1rem;
+}
+.grupo-2 {
+  
+  padding-block: .5rem;
+}
+.catalogo-descripcion p{
+  font-size: 1.2rem;
+}
+.catalogo-container {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: center;
+  gap: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.vermas-container {
+  
+  width: 100vw;
+  height: auto;
+  display: grid;
+  grid-template-columns:1fr;
+  justify-content: center;
+  gap:0.5rem;
+  text-align: left;
+ /*  margin-bottom: 2rem; */
+}
+
+.vermas-grupo1 {
+  padding: 2rem 2rem 2rem 2rem;
+  margin-top: 3rem;
+  display: grid;
+  text-align: center;
+ 
+}
+.vermas-grupo2 h2{
+  text-align: center;
+}
+
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/logoRedondo1.png" type="image/x-icon" />
+    <!-- link de boostraps para iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Centro Estética</title>
+</head>
+
+<body>
+    <!-- INICIO de barra de navegación -->
+    <header>
+        <div class="logo">
+            <a href="./index.html"><img src="./images/logoRedondo1.png" alt="Logo" height="10%"/></a>
+            <button id="btn-nav-bar" class="boton-abrir-menu"><i class="bi bi-list"></i></button>
+        </div>
+        <nav id="nav-bar" class="nav-bar">
+            <ul class="nav-link">
+                <li class="link"><a href="#">Home</a></li>
+                <li class="link"><a href="#quienesSomos">Nosotros</a></li>
+                <li class="link"><a href="#nuestros-proyectos">Sacar Turno</a></li>
+                <li class="link"><a href="#contacto">Contactanos</a></li>
+            </ul>
+            <div class="redes">
+                <!-- iconos de bootstraps -->
+                <a href="https://www.facebook.com/" target="_blank"> <i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+            </div>
+
+            <button class="boton-cerrar-menu" id="boton-cerrar"><i class="bi bi-x"></i></button>
+        </nav>
+    </header>
+    <!-- fin de barra de navegación -->
+
+    <!-- Incio slider -->
+    <section class="Home">
+        <div class="container-slider">
+            <div class="slider" id="slider">
+                <img src="./images/carrusuel1.jpg" alt="image1" class="imagen-slider" id="slider1" />
+                <img src="./images/carrusuel2.jpg" alt="image2" class="imagen-slider" id="slider2" />
+                <img src="./images/carrusuel3.jpg" alt="image3" class="imagen-slider" id="slider3" />
+                <img src="./images/carrusuel4.jpg" alt="image4" class="imagen-slider" id="slider4" />
+                <img src="./images/carrusuel5.jpg" alt="image5" class="imagen-slider" id="slider5" />
+                <div class="fixed-content">
+                    <h1 class="main-tittle">CENTRO DE ESTETICA</h1>
+                    <p class="intro-text">
+                          Cortes, coloración, tratamientos de keratina, extensiones.
+                    </p>
+                    <button class="general-button" onclick="window.location.href= './catalogo.html'">Ver más</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- fin  slider -->
+
+    <!-- Incio quienes somos -->
+    <section class="quienes-somos" id="quienesSomos">
+        <h2 class="subtitulo-quienesSomos">Nosotros </h2>
+        <img class="shape" src="./images/Shapes.png" alt="shape" />
+
+        <div class="container-quienes-somos">
+            <div class="quienes-somos-descripcion">
+                <p>
+                    <span>Centro de Estética </span> .
+                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui at quisquam, corporis aliquam explicabo assumenda.</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa deleniti rem quibusdam repellendus ullam ut enim dolor. Officiis, sapiente alias magnam.
+                    <!-- <span>de buena madera</span>. -->
+                </p>
+            </div>
+            <div class="quienes-somos-img">
+                <img src="./images/nosotros.jpg" alt="imagen-quienes-somos" />
+            </div>
+        </div>
+    </section>
+    <!-- Fin quienes somos -->
+    <!-- Inicio nuestros productos -->
+
+    <section class="nuestros-productos" id="nuestros-proyectos">
+        <h2 class="subtitulo-nuestros-productos">SACAR TURNOS</h2>
+        <img class="np-shape" src="./images/npShapes.png" alt="shape">
+        <div class="nuestros-productos-descripcion">
+          <!--   <p>LO MEJOR PARA VOS</p> -->
+        </div>
+      <div>
+        <iframe  class="agenda" src="https://calendly.com/turnosparaeste/atencion-con-estilista"></iframe>
+      </div>
+       <!--  <div class="container-nuestros-productos">
+            <div class="item1-nuestros-productos">
+                <img src="./images/imgCatalogo/banqueta.jpg" alt="banqueta apoya zapatos">
+                <p>BANQUETA APOYA ZAPATOS</p>
+                <p>$15.000</p>
+            </div>
+            <div class="item1-nuestros-productos">
+                <img src="./images/imgCatalogo/estanteria.jpg" alt="estanteria">
+                <p>ESTANTERIA 4 ESTANTES</p>
+                <p>$15.000</p>
+            </div>
+            <div class="item1-nuestros-productos">
+                <img src="./images/imgCatalogo/comoda4.jpg" alt="comoda dos puertas">
+                <p>COMODA DOS PUERTAS</p>
+                <p>$15.000</p>
+            </div>
+        </div> -->
+        <div class="boton-nuestros-productos">
+            <button class="general-button" onclick="window.location.href= './catalogo.html'">Ver más</button>
+        </div>
+
+    </section>
+
+    <!-- fin nuestros productos -->
+
+    <!-- Incio contactanos -->
+    <section class="contactanos" id="contacto">
+
+        <h2 class="subtitulo">Contactanos</h2>
+        <p class="intro-seccion">Contactanos para decirnos tus dudas
+        </p>
+        <img class="shape2" src="./images/Shapes.png" alt="shape2">
+        <div class="container-contactanos">
+            <div class="contactoForm">
+                <form id="form">
+                    <i class="fas fa-paper-plane"></i>
+                    <div class="inputBox">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" onkeyup="validateName()" />
+                        <span id="name-error"></span>
+                    </div>
+                    <div class="inputBox">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" onkeyup="validateEmail()" />
+                        <span id="email-error"></span>
+                    </div>
+                    <div class="inputBox">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" onkeyup="validateTel()" />
+                        <span id="tel-error"></span>
+                    </div>
+                    <div class="inputBox">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" onkeyup="validateMsg()"></textarea>
+                        <span id="msg-error"></span>
+                    </div>
+
+                    <!-- <div class="inputButtons"> -->
+                        <!-- <label class="newsletter" for="newsletter">
+                            <input id="newsletter" class="checkbox" name="newsletter" type="checkbox" />
+                            Aceptas suscribirte a nuestro newsletter
+                        </label> -->
+                    <div>                       
+                        <label for="imagen" class="subirImagen"><i class="bi bi-upload"></i>Subir imagen</label>
+                        <input type="file" id="imagen" name="imagen" />
+                        <p></p>
+                        <input class="submit btn" type="submit" onclick="return validateForm()" />
+                        <span id="submit-error"></span>
+                    </div>
+                </form>
+                <a class="btn-wsp" href="https://walink.co/04217d" target="_blank">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+            </div>
+            <div class="contactanos-img">
+                <img src="./images/imagen-formulario.png" alt="imagen-contactanos" />
+            </div>
+        </div>
+    </section>
+    <!-- Fin contactanos -->
+
+    <!---------inicio del footer-------->
+
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="mapa">
+                <h3>como llegar</h3>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.6115295316963!2d-58.40286492493447!3d-34.765377366052554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd2ec64d2d01d%3A0x3240c3a9f9d9fae2!2sGral.%20Bartolom%C3%A9%20Mitre%2C%20Lomas%20de%20Zamora%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1713894758274!5m2!1ses!2sar"></iframe>
+            </div>
+
+            <div class="inf">
+                <h4>información general</h4>
+                <p>Centro de Estética</p>
+                <p>mitre 8465</p>
+                <p>buenos aires</p>
+                <p>argentina</p>
+                <p>Escribínos por wp al:3415 5555</p>
+                <p>Email : tumail@gmail.com</p>
+            </div>
+
+            <div class="nav-footer">
+                <ul>
+                    <li class="link-footer"><a href="#">Home</a></li>
+                    <li class="link-footer"><a href="#quienesSomos">Nosotros</a></li>
+                    <li class="link-footer"><a href="#nuestros-proyectos">Sacar Turno</a></li>
+                    <li class="link-footer"><a href="#contacto">Contactanos</a></li>
+                </ul>
+                <div class="redes-social">
+                    <a href="https://www.facebook.com/" target="_blank"> <i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <p class="nombre-footer"> &copy;2024 Centro de Estética todos los derechos son
+                reservados</p>
+
+
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>
