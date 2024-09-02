@@ -106,8 +106,8 @@ function validateMsg() {
   let required = 0;
   let left = required + mensaje.length;
   
-  if(left < 30) {
-    msgError.innerHTML = left + ' / 30';
+  if(left < 20) {
+    msgError.innerHTML = left + ' / 20';
     return false;
   }
 
